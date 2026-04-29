@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-primary: #1e1b4b;
+  --color-brand-secondary: #4f46e5;
+  --color-bg-base: #ffffff;
+  --color-bg-surface: #ffffff;
+  --color-border-base: #eef2ff;
+
+  --shadow-premium: 0 20px 50px -12px rgba(79, 70, 229, 0.08), 0 8px 24px -8px rgba(79, 70, 229, 0.04);
+}
+
+@layer base {
+  body {
+    @apply bg-white text-indigo-950 transition-colors duration-500;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/90 backdrop-blur-2xl border border-indigo-50 shadow-premium;
+  }
+
+  .premium-card {
+    @apply bg-white border border-indigo-100 shadow-premium transition-all duration-500 hover:shadow-[0_40px_80px_-20px_rgba(79,70,229,0.12)] hover:border-indigo-200;
+  }
+
+  .stat-label {
+    @apply text-[10px] font-black text-indigo-300 uppercase tracking-[0.2em];
+  }
+
+  .btn-primary {
+    @apply bg-indigo-600 text-white px-8 py-4 rounded-2xl font-bold text-sm shadow-xl shadow-indigo-500/20 hover:-translate-y-0.5 active:translate-y-0 transition-all disabled:opacity-30;
+  }
+
+  .btn-secondary {
+    @apply bg-white border border-indigo-100 text-indigo-900 px-8 py-4 rounded-2xl font-bold text-sm hover:bg-indigo-50 transition-all;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-100 rounded-full hover:bg-indigo-200 transition-colors;
+}

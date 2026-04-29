@@ -1,0 +1,6 @@
+{
+  "name": "SENTINEL | PhishShield AI",
+  "description": "Professional-grade phishing intelligence and threat analysis platform. Advanced heuristic inspection, AI diagnostics, and real-time site auditing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["AI Analysis", "URL Investigation", "NLP Security"]
+}
